@@ -1,6 +1,43 @@
 body{
-    min-height: 100vh;
+    height:100vh;
+    padding-top: 100px;
+    margin:0px;
+    background-color: beige;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    /* overflow: default; */
+}
+
+header{
+    font-size: 76px;
+    font-family:cursive;
+}
+
+.container{
+    display: flex;
+    background-color: white;
+    flex-flow: row wrap;
+    height: 750px;
+    width:750px;
+    margin:20px;
+    flex-shrink:0;
+    /* overflow: hidden; */
+}
+
+top{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width:500px;
+    /* flex:0 0 1px; */
+}
+
+.box{
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid rgb(255, 42, 0) ;
+    flex:none;
 }
