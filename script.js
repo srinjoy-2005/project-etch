@@ -43,6 +43,7 @@ resetButton.addEventListener("click",()=>{
     
 });
 
+//hover effect function used in event listener earlier when ccreaing box
 function hoverEffect(box){
     let currentOpacity = parseFloat(window.getComputedStyle(box).opacity);
     console.log("opacity "+currentOpacity);
@@ -61,3 +62,6 @@ function hoverEffect(box){
 //initial page load
 createGrid(2);
 
+//
+// hover event added when creating the box
+//could not find way to do that later
