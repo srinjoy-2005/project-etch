@@ -1,6 +1,6 @@
 body{
     height:100vh;
-    padding-top: 100px;
+    padding-top: 0px;
     margin:0px;
     background-color: beige;
     display: flex;
@@ -38,6 +38,21 @@ top{
 .box{
     box-sizing: border-box;
     background: #fff;
-    border: 1px solid rgb(255, 42, 0) ;
+    border: 0.1px solid rgb(255, 42, 0) ;
     flex:none;
+}
+
+.darken{
+    background-color: blue;
+    opacity: 0;
+}
+
+footer{
+    font-size: 20px;
+    background-color: blueviolet;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
 }

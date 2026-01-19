@@ -1,9 +1,14 @@
 function addSquare(boxsize){
     const newDiv=document.createElement("div");
-    newDiv.classList.add("box");
+    newDiv.classList.add("box","darken");
     newDiv.style.height=boxsize+"px";
     newDiv.style.width=boxsize+"px";
     const container = document.querySelector(".container");
+    newDiv.addEventListener('mouseenter',(e)=>{
+        hoverEffect(e.currentTarget);
+        // console.log(e.currentTarget);
+    });
+    
     container.appendChild(newDiv);
 }
 
@@ -29,7 +34,7 @@ resetButton.addEventListener("click",()=>{
     let size = prompt("Enter size of grid:");
     if (size === null) return;
     size = Number(size);
-    if (Number.isNaN(size) || size <= 0 || size > 100) {
+    if (Number.isNaN(size) || size <= 0 || size > 300) {
         alert("Please enter a number between 1 and 300");
         return;
     }
@@ -37,3 +42,22 @@ resetButton.addEventListener("click",()=>{
     console.log("created grid of size "+size);
     
 });
+
+function hoverEffect(box){
+    let currentOpacity = parseFloat(window.getComputedStyle(box).opacity);
+    console.log("opacity "+currentOpacity);
+    
+    
+    if (currentOpacity===1.0){
+        return;
+    }
+    currentOpacity+=0.1;
+    box.style.opacity=currentOpacity;
+    
+}
+
+
+
+//initial page load
+createGrid(2);
+
